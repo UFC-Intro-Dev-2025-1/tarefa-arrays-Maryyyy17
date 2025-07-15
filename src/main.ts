@@ -17,36 +17,26 @@
 
 const numeros: number[] = [10, 20, 30, 40, 50];
 
-const tamanho (tamanho : number) {
-   numeros.length
-}
-console.log (tamanho)
-
-const adicionar = numeros.push (60,70);
-console.log (adicionar );
+numeros.push (60,70);
 
 function mostrarArray(array: number[]): void {
-    console.log( numeros );
-    console.log(`Tamanho: ` + numeros.length);
-    console.log(`Array: ` + adicionar);
+    console.log( array );
+    console.log(`Tamanho: ` + array.length);
+    console.log(`Array: ` + array);
 }
 mostrarArray(numeros);
-
-
-
-
 
 const elementoExcluido = numeros.pop () ;
 mostrarArray(numeros);
 console.log(`Elemento excluído: ${elementoExcluido}`);
 
 numeros.forEach((numero) => {
-    console.log ('Numeros : ' + numero)
-})
+    console.log(`Numeros : ${numero}`);
+});
 
 const dobrados = numeros.map((x) => x * 2);
 mostrarArray(dobrados);
-console.log (dobrados)
+
 
 const valorInicial = 0;
 const soma = numeros.reduce( (accumulator : number , currentValue : number) => accumulator + currentValue , valorInicial);
